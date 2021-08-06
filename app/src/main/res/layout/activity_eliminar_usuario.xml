@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/btn_buscar"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:background="@drawable/boton_redono"
+        android:onClick="consultar"
+        android:src="@android:drawable/ic_menu_search"
+        app:backgroundTint="#F44336"
+        app:layout_constraintBottom_toTopOf="@+id/txt_nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.302"
+        app:layout_constraintStart_toEndOf="@+id/text_id"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegistrar"
+        app:layout_constraintVertical_bias="0.802"
+        tools:ignore="OnClick" />
+
+    <EditText
+        android:id="@+id/text_id"
+        android:layout_width="244dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/border_radius_modificar_consultar"
+        android:ems="10"
+        android:hint="ID del Usuario"
+        android:inputType="number"
+        android:paddingLeft="12dp"
+        android:textColor="#F44336"
+        android:textColorHint="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/border_radius_modificar_consultar"
+        android:ems="10"
+        android:hint="Nombre del Usuario"
+        android:inputType="textPersonName"
+        android:paddingLeft="12dp"
+        android:textColorHint="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_id" />
+
+    <EditText
+        android:id="@+id/txt_telefono"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/border_radius_modificar_consultar"
+        android:ems="10"
+        android:hint="Teléfono del Usuario"
+        android:inputType="textPersonName"
+        android:paddingLeft="12dp"
+        android:textColorHint="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombre" />
+
+    <ImageButton
+        android:id="@+id/btn_eliminar"
+        android:layout_width="52dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/boton_redono"
+        android:backgroundTint="#FB0000"
+        android:onClick="eliminar"
+        android:src="@android:drawable/ic_menu_delete"
+        app:layout_constraintEnd_toStartOf="@+id/volver"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_telefono" />
+
+    <Button
+        android:id="@+id/volver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:background="@drawable/boton_redono"
+        android:onClick="goToInicio"
+        android:padding="12dp"
+        android:text="Volver al Inicio"
+        android:textStyle="bold"
+        app:backgroundTint="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_telefono" />
+
+    <TextView
+        android:id="@+id/txtRegistrar"
+        android:layout_width="382dp"
+        android:layout_height="102dp"
+        android:background="#FFC107"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Eliminar Usuario"
+        android:textColor="#FB0000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.349" />
+
+    <TextView
+        android:id="@+id/txt_creador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Nallis 2021"
+        android:textColor="#F44336"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_eliminar"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
